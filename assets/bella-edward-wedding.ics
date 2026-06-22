@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bella and Edward//Wedding Invite//RU
+BEGIN:VEVENT
+UID:bellaedward-20260808@example.com
+DTSTAMP:20260101T000000Z
+DTSTART:20260808T160000
+DTEND:20260809T000000
+SUMMARY:Свадьба Беллы и Эдварда
+DESCRIPTION:Свадьба на всю вечность. Приходите после заката и с хорошим настроением.
+LOCATION:Forks, Washington, USA (47.9503, -124.3855)
+END:VEVENT
+END:VCALENDAR

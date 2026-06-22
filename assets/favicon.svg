@@ -1,0 +1,4 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+<defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='#7b253d'/><stop offset='100%' stop-color='#10080d'/></linearGradient></defs>
+<rect width='64' height='64' rx='16' fill='url(#g)'/><path d='M43 11a17 17 0 1 0 8 29 20 20 0 1 1-8-29Z' fill='#dce2eb' opacity='.9'/>
+<text x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='#f5eee4'>B&amp;E</text></svg>
