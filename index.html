@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#120d14">
-<meta name="version" content="0.9">
+<meta name="version" content="1.0">
 <title>Белла & Эдвард — Свадьба на всю вечность</title>
 <link rel="icon" href="assets/favicon.svg">
 <style>
@@ -37,7 +37,7 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
 <section class="section" id="rsvp"><div class="wrap"><div class="section-title reveal"><div class="eyebrow">анкета</div><h2>Запись в список гостей клана</h2><p>Подтвердите, что рискнёте прийти. Анкета не кусается. Почти.</p></div><form class="rsvp pattern-card reveal" id="rsvpForm" name="bella-edward-rsvp"><div class="form-grid"><div class="field"><label for="name">Имя и фамилия</label><input id="name" name="name" type="text" placeholder="Например, Карлайл Каллен"></div><div class="field"><label for="attendance">Сможете ли присутствовать</label><select id="attendance" name="attendance"><option>Да, приду после заката</option><option>Да, буду с парой</option><option>Пока не уверен, сверяюсь с луной</option><option>К сожалению, не смогу — солнце, дела, ипотека</option></select></div><div class="field"><label for="guests">Сколько вас будет</label><select id="guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4+</option></select></div><div class="field"><label for="plusone">Будете ли с +1</label><select id="plusone" name="plusone"><option>Нет</option><option>Да</option><option>Пока не знаю</option></select></div><div class="field"><label for="children">Будут ли дети</label><select id="children" name="children"><option>Нет</option><option>Да</option><option>Пока не знаю</option></select></div><div class="field"><label for="menu">Пожелания по меню</label><input id="menu" name="menu" type="text" placeholder="Вегетарианское, без глютена, побольше десертов..."></div><div class="field full"><div class="field-title">Кем вы прибудете на церемонию?</div><div class="radio-grid" id="statusChoices"><label class="choice"><input type="radio" name="status" value="human" checked> Человек</label><label class="choice"><input type="radio" name="status" value="vampire"> Вампир</label><label class="choice"><input type="radio" name="status" value="werewolf"> Оборотень</label><label class="choice"><input type="radio" name="status" value="undecided"> Пока не определился, жду полнолуния</label></div><div class="conditional is-active" data-status="human"><h3>Для людей</h3><div class="form-grid"><div class="field"><label>Группа крови, если готовы раскрыть тайну</label><select name="human_blood"><option>I группа — классика</option><option>II группа — нежный вкус</option><option>III группа — редкий гость</option><option>IV группа — коллекционный вариант</option><option>Предпочитаю не уточнять, я просто потанцевать</option><option>У меня томатный сок, не приставайте</option></select></div><div class="field"><label>Уровень тревожности рядом с вампирами</label><select name="human_anxiety"><option>Полностью спокоен</option><option>Немного нервничаю</option><option>Держу чеснок в кармане</option><option>Я вообще не знал, куда иду</option></select></div><div class="field full"><label>Согласны ли вы не убегать во время первого танца?</label><select name="human_run"><option>Да, постараюсь</option><option>Зависит от музыки</option><option>Если Эдвард посмотрит слишком пристально — не обещаю</option></select></div></div><label class="check"><input type="checkbox" name="human_agree"> Я подтверждаю, что прихожу добровольно и осознаю риск быть очарованным.</label></div><div class="conditional" data-status="vampire"><h3>Для вампиров</h3><div class="form-grid"><div class="field"><label>Ваш тип питания</label><select name="vampire_food"><option>Вегетарианский, как у приличных Калленов</option><option>Только тортик и красное в бокале</option><option>Я на диете, сегодня никого не кусаю</option><option>Лучше не сажайте меня рядом с людьми</option></select></div><div class="field"><label>Как вы переносите вспышки фотографа?</label><select name="vampire_flash"><option>Спокойно, я красиво бликую</option><option>Могу слегка засверкать</option><option>Только без крупного плана</option><option>Фотографа предупредить заранее</option></select></div><div class="field"><label>Нужна ли вам теневая зона?</label><select name="vampire_shadow"><option>Да, ближе к шторам</option><option>Нет, я уже привык</option><option>Только если банкет начнётся до заката</option></select></div><div class="field"><label>Ваш свадебный напиток</label><select name="vampire_drink"><option>Красное вино</option><option>Гранатовый сок</option><option>Томатный сок</option><option>Что-нибудь тёмное и драматичное</option></select></div></div><label class="check"><input type="checkbox" name="vampire_agree"> Я обещаю не обращать гостей без согласования с молодожёнами.</label></div><div class="conditional" data-status="werewolf"><h3>Для оборотней</h3><div class="form-grid"><div class="field"><label>Обработка от блох пройдена?</label><select name="wolf_fleas"><option>Да, свежая</option><option>В процессе</option><option>Я обиделся</option><option>Это личный вопрос</option></select></div><div class="field"><label>Фаза луны влияет на ваше поведение?</label><select name="wolf_moon"><option>Нет, я воспитанный</option><option>Немного рычу после 23:00</option><option>Лучше не ставьте медленные танцы</option><option>Я отвечаю только за первую половину вечера</option></select></div><div class="field"><label>Нужна ли вам отдельная зона для перевоплощения?</label><select name="wolf_zone"><option>Нет, контролирую себя</option><option>Да, желательно за рестораном</option><option>Только если включат слишком грустную музыку</option></select></div><div class="field"><label>С кем вас лучше не сажать?</label><select name="wolf_seat"><option>С вампирами</option><option>С людьми с очень вкусным шашлыком</option><option>С бывшими</option><option>Сажайте куда хотите, я общительный</option></select></div><div class="field"><label>Степень линьки на мероприятии</label><select name="wolf_fur"><option>Не линяю</option><option>Немного, в пределах приличия</option><option>После меня нужен ролик для одежды</option><option>Я приду в костюме, всё под контролем</option></select></div></div><label class="check"><input type="checkbox" name="wolf_agree"> Я подтверждаю, что в случае полнолуния беру ответственность за порванный дресс-код.</label></div><div class="conditional" data-status="undecided"><h3>Для неопределившихся</h3><div class="form-grid"><div class="field"><label>Выберите ближайшее к вам состояние</label><select name="undecided_state"><option>Человек, но по утрам выгляжу как вампир</option><option>Вампир, но пока без официального статуса</option><option>Оборотень, но только в пробках</option><option>Я родственник, мне можно всё</option></select></div><div class="field"><label>Куда вас посадить?</label><select name="undecided_seat"><option>К людям</option><option>К вампирам</option><option>К оборотням</option><option>В безопасную нейтральную зону рядом с тортом</option></select></div></div></div></div><div class="field full"><label for="comment">Комментарий для Беллы и Эдварда</label><textarea id="comment" name="comment" placeholder="Напишите всё, что хотите сообщить молодожёнам"></textarea></div><div class="field full"><button class="btn" type="submit">Отправить анкету</button><p class="form-note">В этой версии анкета готова визуально. После публикации на GitHub Pages подключим отправку через Cloudflare Worker в Telegram.</p></div></div></form></div></section>
 <section class="section" id="contacts"><div class="wrap"><div class="section-title reveal"><div class="eyebrow">контакты</div><h2>Связь с кланом</h2><p>Если заблудитесь в тумане, не можете найти место сбора или хотите уточнить важные детали — напишите организатору. Ответ придёт быстрее, чем наступит рассвет.</p></div><div class="cards-grid reveal"><article class="card pattern-card"><h3>Белла</h3><p>Telegram: добавить позже.</p></article><article class="card pattern-card"><h3>Эдвард</h3><p>Telegram: добавить позже.</p></article></div><div class="cards-grid reveal" style="margin-top:14px;grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto"><article class="card pattern-card" style="text-align:center"><h3>Организатор</h3><p>По вопросам маршрута, тайминга и внезапных встреч с туманом.</p><div class="btn-row" style="margin-top:16px"><a class="btn" href="https://t.me/R2D2A22" target="_blank" rel="noopener">Написать в Telegram</a></div></article></div></div></section>
 <section class="section final no-cv" id="final"><div class="final-media"><img src="assets/forest.jpg" alt="Силуэты пары в лесу под луной" loading="lazy" decoding="async"></div><div class="final-overlay"></div><div class="final-content reveal is-visible"><div class="eyebrow">финал</div><h2>До встречи после заката</h2><p>С любовью, Белла и Эдвард. Вечность начинается с одного приглашения.</p><div class="btn-row"><a class="btn" href="#top">Вернуться наверх</a></div></div></section>
-</main><footer class="footer">Версия 0.9 · исправлена логика музыки: без автозапуска, включение с первого нажатия.</footer></div><div class="toast" id="toast"></div>
+</main><footer class="footer">Версия 1.0 · RSVP-анкета подключена к Telegram через Cloudflare Worker.</footer></div><div class="toast" id="toast"></div>
 <script>
 (function(){
   document.documentElement.classList.add('js-ready');
@@ -50,6 +50,8 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
     clearTimeout(showToast._timer);
     showToast._timer = setTimeout(() => toast.classList.remove('show'), 3200);
   };
+
+  const RSVP_ENDPOINT = 'https://bella-edward-rsvp.avlasevi4.workers.dev';
 
   const targetDate = new Date('2026-08-08T16:00:00');
   const ids = {
@@ -136,9 +138,44 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
 
   const form = document.getElementById('rsvpForm');
   if (form) {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      showToast('Анкета пока не отправляется на сервер. Следующий этап — подключение Telegram-бота через Cloudflare Worker.');
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton ? submitButton.textContent : '';
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Отправляем...';
+        }
+
+        const response = await fetch(RSVP_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        const result = await response.json().catch(() => null);
+
+        if (!response.ok || !result || result.ok !== true) {
+          throw new Error(result?.error || 'RSVP send failed');
+        }
+
+        showToast('Анкета отправлена. Клан получил ваше сообщение.');
+        form.reset();
+        updateStatus();
+      } catch (error) {
+        showToast('Не удалось отправить анкету. Попробуйте ещё раз или напишите организатору в Telegram.');
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText || 'Отправить RSVP в клан';
+        }
+      }
     });
   }
 
