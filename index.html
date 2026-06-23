@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#120d14">
-<meta name="version" content="1.6">
+<meta name="version" content="1.7">
 <title>Белла & Эдвард — Свадьба на всю вечность</title>
 <link rel="icon" href="assets/favicon.svg">
 <style>
@@ -21,7 +21,7 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
 .timeline{max-width:760px;margin:0 auto;position:relative;display:grid;gap:14px}.timeline:before{content:'';position:absolute;left:24px;top:18px;bottom:18px;width:1px;background:rgba(220,227,235,.25)}.timeline-item{position:relative;padding:18px 18px 18px 66px;background:rgba(9,12,18,.80)}.timeline-item:before{content:'';position:absolute;left:15px;top:22px;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,#f4e8df 0 22%,#7d2940 25% 64%,rgba(125,41,64,.18) 67%)}.timeline-time{font-weight:800;letter-spacing:.06em;color:#f7eadb}.timeline-title{font-family:var(--serif);font-size:28px;color:#fff8ee;margin-top:2px}.timeline-item p{margin-top:6px;font-size:14px}
 .calendar-note{margin-top:10px;text-align:center;font-size:13px;color:var(--soft)}.location-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.location-card{padding:22px;background:rgba(9,12,18,.82)}.location-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}.location-type{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#dbe1ea}.location-title{font-family:var(--serif);font-size:30px;color:#fff8ee;line-height:1.06}.location-description{margin-top:10px}.location-meta{display:grid;gap:8px;margin-top:16px}.location-meta-row{display:flex;gap:8px;align-items:flex-start;color:#efe7dd;font-size:14px}.location-meta-label{min-width:98px;color:var(--soft);font-weight:700}.location-top{align-items:flex-start}.location-top>div:first-child{display:flex;flex-direction:column;align-items:flex-start}.location-top>div:first-child .location-type{transform:translateY(-4px);margin-bottom:12px}.location-top>div:last-child .location-type{margin-top:2px}.location-footnote{max-width:760px;margin:18px auto 0;text-align:center;color:var(--muted)}.location-footnote strong{display:block;color:#f4eee5;font-family:var(--serif);font-size:24px;margin-bottom:6px}@media (max-width:760px){.location-grid{grid-template-columns:1fr}.location-top{align-items:flex-start;flex-direction:column}.location-meta-row{flex-direction:column;gap:4px}.location-meta-label{min-width:0}}.cards-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:22px;background:rgba(9,12,18,.82)}.card h3{margin-bottom:8px}.location-address{margin-top:6px;color:#efe7dd;font-weight:650}.palette{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:24px auto 0;max-width:720px}.swatch{width:74px;text-align:center;color:var(--muted);font-size:11px}.swatch i{display:block;width:58px;height:58px;margin:0 auto 8px;border-radius:50%;border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.10)}.wish-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.wish-card{min-height:180px}.wish-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(138,49,73,.22);border:1px solid rgba(255,255,255,.12);margin-bottom:14px}
 .rsvp{padding:24px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:grid;gap:8px}.field.full{grid-column:1/-1}label,.field-title{color:#f2ebe2;font-size:13px;font-weight:800}input,select,textarea{width:100%;color:var(--ink);background:rgba(8,11,16,.90);border:1px solid rgba(232,238,245,.14);border-radius:16px;padding:13px 14px;outline:none}textarea{min-height:110px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:rgba(179,64,92,.65)}select option{background:#10141c;color:var(--ink)}.radio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice{display:flex;align-items:center;gap:10px;padding:12px;border-radius:16px;border:1px solid rgba(232,238,245,.12);background:rgba(255,255,255,.04);color:var(--muted);font-size:13px}.choice input,.check input{width:auto;accent-color:var(--wine2)}.conditional{display:none;margin-top:14px;padding:18px;border-radius:22px;border:1px solid rgba(138,49,73,.22);background:rgba(138,49,73,.10)}.conditional.is-active{display:block}.conditional h3{font-size:30px;margin-bottom:14px}.check{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:13px;line-height:1.5;margin-top:12px}.form-note{margin-top:10px;text-align:center;font-size:13px;color:var(--soft)}
-.final{position:relative;min-height:82svh;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding:0 0 36px;isolation:isolate}.final-overlay{background:linear-gradient(180deg,rgba(4,6,10,.22),rgba(4,6,10,.40) 44%,rgba(4,6,10,.95) 100%)}.final-content{width:min(100%,720px);text-align:center;padding:0 16px}.final-content p{max-width:500px;margin:16px auto 24px}.footer{position:relative;z-index:1;padding:26px 16px 38px;text-align:center;color:rgba(214,204,208,.65);font-size:12px;background:#06070a}.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(120%);opacity:0;z-index:50;width:min(calc(100% - 24px),420px);padding:14px 16px;border-radius:18px;background:rgba(9,12,18,.96);border:1px solid rgba(255,255,255,.12);color:var(--ink);box-shadow:0 18px 42px rgba(0,0,0,.28);transition:transform .26s ease,opacity .26s ease;text-align:center;font-size:13px}.toast.show{transform:translateX(-50%) translateY(0);opacity:1}.footer a{color:#f4eee5;text-decoration:none;border-bottom:1px solid rgba(244,238,229,.28)}.footer a:hover{border-bottom-color:rgba(244,238,229,.78)}.floating-music{position:fixed;right:16px;top:16px;z-index:80;width:76px;height:76px;border:0;background:transparent;padding:0;margin:0;display:flex;align-items:center;justify-content:center;cursor:pointer;filter:drop-shadow(0 16px 32px rgba(0,0,0,.45));transition:transform .2s ease,filter .2s ease,opacity .2s ease}.floating-music:hover{transform:translateY(-2px) scale(1.03);filter:drop-shadow(0 20px 38px rgba(0,0,0,.52))}.floating-music img{width:100%;height:100%;display:block;object-fit:contain;pointer-events:none}.floating-music:focus-visible{outline:2px solid rgba(244,238,229,.72);outline-offset:4px;border-radius:999px}@media (max-width:760px){.floating-music{right:12px;top:12px;width:62px;height:62px}}.reveal{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}.js-ready .reveal:not(.is-visible){opacity:0;transform:translateY(16px)}.reveal.is-visible{opacity:1;transform:none}
+.final{position:relative;min-height:82svh;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding:0 0 36px;isolation:isolate}.final-overlay{background:linear-gradient(180deg,rgba(4,6,10,.22),rgba(4,6,10,.40) 44%,rgba(4,6,10,.95) 100%)}.final-content{width:min(100%,720px);text-align:center;padding:0 16px}.final-content p{max-width:500px;margin:16px auto 24px}.footer{position:relative;z-index:1;padding:26px 16px 38px;text-align:center;color:rgba(214,204,208,.65);font-size:12px;background:#06070a}.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(120%);opacity:0;z-index:50;width:min(calc(100% - 24px),420px);padding:14px 16px;border-radius:18px;background:rgba(9,12,18,.96);border:1px solid rgba(255,255,255,.12);color:var(--ink);box-shadow:0 18px 42px rgba(0,0,0,.28);transition:transform .26s ease,opacity .26s ease;text-align:center;font-size:13px}.toast.show{transform:translateX(-50%) translateY(0);opacity:1}.footer a{color:#f4eee5;text-decoration:none;border-bottom:1px solid rgba(244,238,229,.28)}.footer a:hover{border-bottom-color:rgba(244,238,229,.78)}.floating-music{position:fixed;right:16px;top:16px;z-index:80;width:76px;height:76px;border:0;background:transparent;padding:0;margin:0;display:flex;align-items:center;justify-content:center;cursor:pointer;filter:drop-shadow(0 16px 32px rgba(0,0,0,.45));transition:transform .2s ease,filter .2s ease,opacity .2s ease}.floating-music:hover{transform:translateY(-2px) scale(1.03);filter:drop-shadow(0 20px 38px rgba(0,0,0,.52))}.floating-music img{width:100%;height:100%;display:block;object-fit:contain;pointer-events:none}.floating-music:focus-visible{outline:2px solid rgba(244,238,229,.72);outline-offset:4px;border-radius:999px}@media (max-width:760px){.floating-music{right:12px;top:12px;width:62px;height:62px}}.reveal{opacity:1;transform:translate3d(0,0,0);transition:opacity .56s cubic-bezier(.22,.72,.18,1),transform .56s cubic-bezier(.22,.72,.18,1);transition-delay:var(--reveal-delay,0ms)}.js-ready .reveal:not(.is-visible){opacity:0;transform:translate3d(0,18px,0)}.reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
 @media (max-width:760px){.section{padding:64px 0}.btn-row{flex-direction:column;align-items:center}.btn{width:min(100%,330px)}.mini-btn{width:min(100%,260px)}.letter-content{padding:20px}.letter-text{padding:20px 16px}.letter-text p{font-size:14px;line-height:1.56}.countdown-grid{grid-template-columns:repeat(2,1fr)}.cards-grid,.wish-grid,.form-grid,.radio-grid{grid-template-columns:1fr}.wish-card{min-height:auto}.rsvp{padding:20px}}@media (max-width:430px){body:before{background-size:100vw auto;opacity:.54}.letter-bg{min-height:480px}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
 
 .invitation-seal{display:flex;justify-content:center;align-items:center;margin:0 auto 14px}
@@ -31,165 +31,16 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
 @media (max-width:760px){.invitation-seal{margin:-2px auto 12px}.invitation-seal-image{width:84px}.location-chip{top:-10px;margin-bottom:10px}}
 
 
-/* v1.6 premium motion layer */
-:root{--motion-ease:cubic-bezier(.22,.72,.18,1);--motion-soft:cubic-bezier(.16,.72,.2,1)}
-.reveal{
-  opacity:1;
-  transform:translate3d(0,0,0);
-  filter:none;
-  transition:
-    opacity .82s var(--motion-ease) var(--reveal-delay,0ms),
-    transform .82s var(--motion-ease) var(--reveal-delay,0ms),
-    filter .82s var(--motion-ease) var(--reveal-delay,0ms);
-  will-change:opacity,transform;
-}
-.js-ready .reveal:not(.is-visible){
-  opacity:0;
-  transform:translate3d(0,24px,0);
-  filter:blur(.8px);
-}
-.reveal.is-visible{
-  opacity:1;
-  transform:translate3d(0,0,0);
-  filter:none;
-}
-.timeline-item.reveal,
-.location-card.reveal,
-.wish-card.reveal,
-.swatch.reveal,
-.cards-grid .card.reveal{
-  transition-duration:.74s;
-}
-.timeline-item.reveal:not(.is-visible):before{
-  opacity:.15;
-  transform:scale(.82);
-}
-.timeline-item:before{
-  transition:opacity .62s var(--motion-ease),transform .62s var(--motion-ease);
-}
-.btn,.mini-btn{
-  transition:
-    transform .28s var(--motion-soft),
-    box-shadow .28s var(--motion-soft),
-    border-color .28s var(--motion-soft),
-    background .28s var(--motion-soft),
-    filter .28s var(--motion-soft),
-    opacity .28s var(--motion-soft);
-  will-change:transform;
-}
-@media (hover:hover){
-  .btn:hover,.mini-btn:hover{
-    transform:translateY(-2px);
-    filter:brightness(1.04);
-  }
-  .btn:hover{
-    box-shadow:0 16px 34px rgba(85,24,40,.36),inset 0 1px 0 rgba(255,255,255,.18);
-  }
-  .btn.secondary:hover,.mini-btn:hover{
-    box-shadow:0 12px 26px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.10);
-    border-color:rgba(248,242,235,.30);
-  }
-}
-.btn:active,.mini-btn:active{
-  transform:translateY(0);
-  filter:brightness(.98);
-}
-.choice,input,select,textarea{
-  transition:
-    border-color .28s var(--motion-soft),
-    background .28s var(--motion-soft),
-    box-shadow .28s var(--motion-soft),
-    transform .28s var(--motion-soft);
-}
-.choice:hover{
-  border-color:rgba(232,238,245,.22);
-  background:rgba(255,255,255,.06);
-}
-input:focus,select:focus,textarea:focus{
-  box-shadow:0 0 0 3px rgba(165,54,85,.12);
-}
-.conditional{
-  display:block;
-  overflow:hidden;
-  max-height:0;
-  margin-top:0;
-  padding:0 18px;
-  opacity:0;
-  transform:translate3d(0,10px,0);
-  visibility:hidden;
-  pointer-events:none;
-  border-color:rgba(138,49,73,0);
-  transition:
-    max-height .58s var(--motion-ease),
-    opacity .36s ease,
-    transform .48s var(--motion-ease),
-    margin .48s var(--motion-ease),
-    padding .48s var(--motion-ease),
-    border-color .48s var(--motion-ease);
-}
-.conditional.is-active{
-  max-height:1400px;
-  margin-top:14px;
-  padding:18px;
-  opacity:1;
-  transform:translate3d(0,0,0);
-  visibility:visible;
-  pointer-events:auto;
-  border-color:rgba(138,49,73,.22);
-}
-.invitation-seal{
-  position:relative;
-  isolation:isolate;
-}
-.invitation-seal-image{
-  animation:sealBreath 7.2s ease-in-out infinite;
-}
-.invitation-seal:after{
-  content:"";
-  position:absolute;
-  inset:2px;
-  width:42%;
-  left:8%;
-  border-radius:50%;
-  pointer-events:none;
-  background:linear-gradient(105deg,transparent 0%,rgba(255,236,215,0) 30%,rgba(255,236,215,.28) 48%,rgba(255,236,215,0) 66%,transparent 100%);
-  mix-blend-mode:screen;
-  opacity:0;
-  transform:translateX(-110%) rotate(12deg);
-  animation:sealGlimmer 7.2s ease-in-out infinite;
-}
-@keyframes sealBreath{
-  0%,100%{transform:translate3d(0,0,0);filter:drop-shadow(0 14px 24px rgba(0,0,0,.28)) brightness(1)}
-  50%{transform:translate3d(0,-2px,0);filter:drop-shadow(0 16px 26px rgba(0,0,0,.32)) brightness(1.035)}
-}
-@keyframes sealGlimmer{
-  0%,56%,100%{opacity:0;transform:translateX(-110%) rotate(12deg)}
-  64%{opacity:.42}
-  72%{opacity:0;transform:translateX(155%) rotate(12deg)}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .reveal,.timeline-item:before,.btn,.mini-btn,.choice,input,select,textarea,.conditional,.floating-music{
-    transition:none!important;
-    animation:none!important;
-    transform:none!important;
-    filter:none!important;
-  }
-  .js-ready .reveal:not(.is-visible){
-    opacity:1!important;
-    transform:none!important;
-    filter:none!important;
-  }
-  .conditional{
-    display:none;
-    max-height:none;
-    opacity:1;
-    visibility:visible;
-    pointer-events:auto;
-  }
-  .conditional.is-active{display:block}
-  .invitation-seal:after{display:none}
-}
+/* v1.7 lite motion: smoother, without heavy effects */
+.timeline-item.reveal,.location-card.reveal,.wish-card.reveal,.swatch.reveal,.cards-grid .card.reveal{transition-duration:.48s}
+.btn,.mini-btn{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease,opacity .22s ease}
+@media (hover:hover){.btn:hover,.mini-btn:hover{transform:translateY(-1px)}.btn:hover{box-shadow:0 12px 26px rgba(85,24,40,.24)}.btn.secondary:hover,.mini-btn:hover{box-shadow:0 10px 22px rgba(0,0,0,.20);border-color:rgba(248,242,235,.24)}}
+.btn:active,.mini-btn:active{transform:translateY(0)}
+.conditional{display:block;overflow:hidden;max-height:0;margin-top:0;padding:0 18px;opacity:0;visibility:hidden;pointer-events:none;border-color:rgba(138,49,73,0);transition:max-height .34s ease,opacity .24s ease,margin .24s ease,padding .24s ease,border-color .24s ease}
+.conditional.is-active{max-height:1200px;margin-top:14px;padding:18px;opacity:1;visibility:visible;pointer-events:auto;border-color:rgba(138,49,73,.22)}
+.invitation-seal,.invitation-seal-image{animation:none!important;transform:none!important}
+.invitation-seal:after{display:none!important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.btn,.mini-btn,.conditional{transition:none!important}.js-ready .reveal:not(.is-visible){opacity:1!important;transform:none!important}.conditional{display:none;max-height:none;opacity:1;visibility:visible;pointer-events:auto}.conditional.is-active{display:block}}
 
 </style>
 </head>
@@ -205,7 +56,7 @@ input:focus,select:focus,textarea:focus{
 <section class="section" id="rsvp"><div class="wrap"><div class="section-title reveal"><div class="eyebrow">анкета</div><h2>Запись в список гостей клана</h2><p>Подтвердите, что рискнёте прийти. Анкета не кусается. Почти.</p></div><form class="rsvp pattern-card reveal" id="rsvpForm" name="bella-edward-rsvp"><div class="form-grid"><div class="field"><label for="name">Имя и фамилия</label><input id="name" name="name" type="text" placeholder="Например, Карлайл Каллен"></div><div class="field"><label for="attendance">Сможете ли присутствовать</label><select id="attendance" name="attendance"><option>Да, приду после заката</option><option>Да, буду с парой</option><option>Пока не уверен, сверяюсь с луной</option><option>К сожалению, не смогу — солнце, дела, ипотека</option></select></div><div class="field"><label for="guests">Сколько вас будет</label><select id="guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4+</option></select></div><div class="field"><label for="plusone">Будете ли с +1</label><select id="plusone" name="plusone"><option>Нет</option><option>Да</option><option>Пока не знаю</option></select></div><div class="field"><label for="children">Будут ли дети</label><select id="children" name="children"><option>Нет</option><option>Да</option><option>Пока не знаю</option></select></div><div class="field"><label for="menu">Пожелания по меню</label><input id="menu" name="menu" type="text" placeholder="Вегетарианское, без глютена, побольше десертов..."></div><div class="field full"><div class="field-title">Кем вы прибудете на церемонию?</div><div class="radio-grid" id="statusChoices"><label class="choice"><input type="radio" name="status" value="human" checked> Человек</label><label class="choice"><input type="radio" name="status" value="vampire"> Вампир</label><label class="choice"><input type="radio" name="status" value="werewolf"> Оборотень</label><label class="choice"><input type="radio" name="status" value="undecided"> Пока не определился, жду полнолуния</label></div><div class="conditional is-active" data-status="human"><h3>Для людей</h3><div class="form-grid"><div class="field"><label>Группа крови, если готовы раскрыть тайну</label><select name="human_blood"><option>I группа — классика</option><option>II группа — нежный вкус</option><option>III группа — редкий гость</option><option>IV группа — коллекционный вариант</option><option>Предпочитаю не уточнять, я просто потанцевать</option><option>У меня томатный сок, не приставайте</option></select></div><div class="field"><label>Уровень тревожности рядом с вампирами</label><select name="human_anxiety"><option>Полностью спокоен</option><option>Немного нервничаю</option><option>Держу чеснок в кармане</option><option>Я вообще не знал, куда иду</option></select></div><div class="field full"><label>Согласны ли вы не убегать во время первого танца?</label><select name="human_run"><option>Да, постараюсь</option><option>Зависит от музыки</option><option>Если Эдвард посмотрит слишком пристально — не обещаю</option></select></div></div><label class="check"><input type="checkbox" name="human_agree"> Я подтверждаю, что прихожу добровольно и осознаю риск быть очарованным.</label></div><div class="conditional" data-status="vampire"><h3>Для вампиров</h3><div class="form-grid"><div class="field"><label>Ваш тип питания</label><select name="vampire_food"><option>Вегетарианский, как у приличных Калленов</option><option>Только тортик и красное в бокале</option><option>Я на диете, сегодня никого не кусаю</option><option>Лучше не сажайте меня рядом с людьми</option></select></div><div class="field"><label>Как вы переносите вспышки фотографа?</label><select name="vampire_flash"><option>Спокойно, я красиво бликую</option><option>Могу слегка засверкать</option><option>Только без крупного плана</option><option>Фотографа предупредить заранее</option></select></div><div class="field"><label>Нужна ли вам теневая зона?</label><select name="vampire_shadow"><option>Да, ближе к шторам</option><option>Нет, я уже привык</option><option>Только если банкет начнётся до заката</option></select></div><div class="field"><label>Ваш свадебный напиток</label><select name="vampire_drink"><option>Красное вино</option><option>Гранатовый сок</option><option>Томатный сок</option><option>Что-нибудь тёмное и драматичное</option></select></div></div><label class="check"><input type="checkbox" name="vampire_agree"> Я обещаю не обращать гостей без согласования с молодожёнами.</label></div><div class="conditional" data-status="werewolf"><h3>Для оборотней</h3><div class="form-grid"><div class="field"><label>Обработка от блох пройдена?</label><select name="wolf_fleas"><option>Да, свежая</option><option>В процессе</option><option>Я обиделся</option><option>Это личный вопрос</option></select></div><div class="field"><label>Фаза луны влияет на ваше поведение?</label><select name="wolf_moon"><option>Нет, я воспитанный</option><option>Немного рычу после 23:00</option><option>Лучше не ставьте медленные танцы</option><option>Я отвечаю только за первую половину вечера</option></select></div><div class="field"><label>Нужна ли вам отдельная зона для перевоплощения?</label><select name="wolf_zone"><option>Нет, контролирую себя</option><option>Да, желательно за рестораном</option><option>Только если включат слишком грустную музыку</option></select></div><div class="field"><label>С кем вас лучше не сажать?</label><select name="wolf_seat"><option>С вампирами</option><option>С людьми с очень вкусным шашлыком</option><option>С бывшими</option><option>Сажайте куда хотите, я общительный</option></select></div><div class="field"><label>Степень линьки на мероприятии</label><select name="wolf_fur"><option>Не линяю</option><option>Немного, в пределах приличия</option><option>После меня нужен ролик для одежды</option><option>Я приду в костюме, всё под контролем</option></select></div></div><label class="check"><input type="checkbox" name="wolf_agree"> Я подтверждаю, что в случае полнолуния беру ответственность за порванный дресс-код.</label></div><div class="conditional" data-status="undecided"><h3>Для неопределившихся</h3><div class="form-grid"><div class="field"><label>Выберите ближайшее к вам состояние</label><select name="undecided_state"><option>Человек, но по утрам выгляжу как вампир</option><option>Вампир, но пока без официального статуса</option><option>Оборотень, но только в пробках</option><option>Я родственник, мне можно всё</option></select></div><div class="field"><label>Куда вас посадить?</label><select name="undecided_seat"><option>К людям</option><option>К вампирам</option><option>К оборотням</option><option>В безопасную нейтральную зону рядом с тортом</option></select></div></div></div></div><div class="field full"><label for="comment">Комментарий для Беллы и Эдварда</label><textarea id="comment" name="comment" placeholder="Напишите всё, что хотите сообщить молодожёнам"></textarea></div><div class="field full"><button class="btn" type="submit">Отправить анкету</button></div></div></form></div></section>
 <section class="section" id="contacts"><div class="wrap"><div class="section-title reveal"><div class="eyebrow">контакты</div><h2>Связь с кланом</h2><p>Если заблудитесь в тумане, не можете найти место сбора или хотите уточнить важные детали — напишите организатору. Ответ придёт быстрее, чем наступит рассвет.</p></div><div class="cards-grid reveal"><article class="card pattern-card"><h3>Белла</h3><p>Telegram: добавить позже.</p></article><article class="card pattern-card"><h3>Эдвард</h3><p>Telegram: добавить позже.</p></article></div><div class="cards-grid reveal" style="margin-top:14px;grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto"><article class="card pattern-card" style="text-align:center"><h3>Организатор</h3><p>По вопросам маршрута, тайминга и внезапных встреч с туманом.</p><div class="btn-row" style="margin-top:16px"><a class="btn" href="https://t.me/R2D2A22" target="_blank" rel="noopener">Написать в Telegram</a></div></article></div></div></section>
 <section class="section final no-cv" id="final"><div class="final-media"><img src="assets/forest.jpg" alt="Силуэты пары в лесу под луной" loading="lazy" decoding="async"></div><div class="final-overlay"></div><div class="final-content reveal"><div class="eyebrow">финал</div><h2>До встречи после заката</h2><p>С любовью, Белла и Эдвард. Вечность начинается с одного приглашения.</p><div class="btn-row"><a class="btn" href="#top">Вернуться наверх</a></div></div></section>
-</main><footer class="footer">Версия 1.6 · © Сергей Авласевич · <a href="https://t.me/avlasevi4ai" target="_blank" rel="noopener">AI: @avlasevi4ai</a></footer></div><button class="floating-music" type="button" id="floatingMusicBtn" aria-label="Включить музыку" title="Включить музыку"><img id="floatingMusicIcon" src="assets/music-off.png" alt=""></button><div class="toast" id="toast"></div>
+</main><footer class="footer">Версия 1.7 · © Сергей Авласевич · <a href="https://t.me/avlasevi4ai" target="_blank" rel="noopener">AI: @avlasevi4ai</a></footer></div><button class="floating-music" type="button" id="floatingMusicBtn" aria-label="Включить музыку" title="Включить музыку"><img id="floatingMusicIcon" src="assets/music-off.png" alt=""></button><div class="toast" id="toast"></div>
 <script>
 (function(){
   document.documentElement.classList.add('js-ready');
@@ -364,25 +215,14 @@ input:focus,select:focus,textarea:focus{
   }
 
 
-  const staggerGroups = [
-    '.timeline',
-    '.location-grid',
-    '.wish-grid',
-    '.palette',
-    '#contacts .cards-grid'
-  ];
-
+  const staggerGroups = ['.timeline', '.location-grid', '.wish-grid', '.palette'];
   staggerGroups.forEach((selector) => {
     document.querySelectorAll(selector).forEach((group) => {
       Array.from(group.children).forEach((item, index) => {
         item.classList.add('reveal');
-        item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 350)}ms`);
+        item.style.setProperty('--reveal-delay', `${Math.min(index * 45, 220)}ms`);
       });
     });
-  });
-
-  document.querySelectorAll('.timeline-item').forEach((item, index) => {
-    item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 420)}ms`);
   });
 
   const reveals = document.querySelectorAll('.reveal:not(.is-visible)');
@@ -394,7 +234,7 @@ input:focus,select:focus,textarea:focus{
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.10 });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add('is-visible'));
