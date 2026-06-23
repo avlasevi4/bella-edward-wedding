@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#120d14">
-<meta name="version" content="1.5">
+<meta name="version" content="1.6">
 <title>Белла & Эдвард — Свадьба на всю вечность</title>
 <link rel="icon" href="assets/favicon.svg">
 <style>
@@ -30,6 +30,167 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
 @media (min-width:768px){.invitation-seal{margin:-2px auto 16px}.invitation-seal-image{width:104px}}
 @media (max-width:760px){.invitation-seal{margin:-2px auto 12px}.invitation-seal-image{width:84px}.location-chip{top:-10px;margin-bottom:10px}}
 
+
+/* v1.6 premium motion layer */
+:root{--motion-ease:cubic-bezier(.22,.72,.18,1);--motion-soft:cubic-bezier(.16,.72,.2,1)}
+.reveal{
+  opacity:1;
+  transform:translate3d(0,0,0);
+  filter:none;
+  transition:
+    opacity .82s var(--motion-ease) var(--reveal-delay,0ms),
+    transform .82s var(--motion-ease) var(--reveal-delay,0ms),
+    filter .82s var(--motion-ease) var(--reveal-delay,0ms);
+  will-change:opacity,transform;
+}
+.js-ready .reveal:not(.is-visible){
+  opacity:0;
+  transform:translate3d(0,24px,0);
+  filter:blur(.8px);
+}
+.reveal.is-visible{
+  opacity:1;
+  transform:translate3d(0,0,0);
+  filter:none;
+}
+.timeline-item.reveal,
+.location-card.reveal,
+.wish-card.reveal,
+.swatch.reveal,
+.cards-grid .card.reveal{
+  transition-duration:.74s;
+}
+.timeline-item.reveal:not(.is-visible):before{
+  opacity:.15;
+  transform:scale(.82);
+}
+.timeline-item:before{
+  transition:opacity .62s var(--motion-ease),transform .62s var(--motion-ease);
+}
+.btn,.mini-btn{
+  transition:
+    transform .28s var(--motion-soft),
+    box-shadow .28s var(--motion-soft),
+    border-color .28s var(--motion-soft),
+    background .28s var(--motion-soft),
+    filter .28s var(--motion-soft),
+    opacity .28s var(--motion-soft);
+  will-change:transform;
+}
+@media (hover:hover){
+  .btn:hover,.mini-btn:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.04);
+  }
+  .btn:hover{
+    box-shadow:0 16px 34px rgba(85,24,40,.36),inset 0 1px 0 rgba(255,255,255,.18);
+  }
+  .btn.secondary:hover,.mini-btn:hover{
+    box-shadow:0 12px 26px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.10);
+    border-color:rgba(248,242,235,.30);
+  }
+}
+.btn:active,.mini-btn:active{
+  transform:translateY(0);
+  filter:brightness(.98);
+}
+.choice,input,select,textarea{
+  transition:
+    border-color .28s var(--motion-soft),
+    background .28s var(--motion-soft),
+    box-shadow .28s var(--motion-soft),
+    transform .28s var(--motion-soft);
+}
+.choice:hover{
+  border-color:rgba(232,238,245,.22);
+  background:rgba(255,255,255,.06);
+}
+input:focus,select:focus,textarea:focus{
+  box-shadow:0 0 0 3px rgba(165,54,85,.12);
+}
+.conditional{
+  display:block;
+  overflow:hidden;
+  max-height:0;
+  margin-top:0;
+  padding:0 18px;
+  opacity:0;
+  transform:translate3d(0,10px,0);
+  visibility:hidden;
+  pointer-events:none;
+  border-color:rgba(138,49,73,0);
+  transition:
+    max-height .58s var(--motion-ease),
+    opacity .36s ease,
+    transform .48s var(--motion-ease),
+    margin .48s var(--motion-ease),
+    padding .48s var(--motion-ease),
+    border-color .48s var(--motion-ease);
+}
+.conditional.is-active{
+  max-height:1400px;
+  margin-top:14px;
+  padding:18px;
+  opacity:1;
+  transform:translate3d(0,0,0);
+  visibility:visible;
+  pointer-events:auto;
+  border-color:rgba(138,49,73,.22);
+}
+.invitation-seal{
+  position:relative;
+  isolation:isolate;
+}
+.invitation-seal-image{
+  animation:sealBreath 7.2s ease-in-out infinite;
+}
+.invitation-seal:after{
+  content:"";
+  position:absolute;
+  inset:2px;
+  width:42%;
+  left:8%;
+  border-radius:50%;
+  pointer-events:none;
+  background:linear-gradient(105deg,transparent 0%,rgba(255,236,215,0) 30%,rgba(255,236,215,.28) 48%,rgba(255,236,215,0) 66%,transparent 100%);
+  mix-blend-mode:screen;
+  opacity:0;
+  transform:translateX(-110%) rotate(12deg);
+  animation:sealGlimmer 7.2s ease-in-out infinite;
+}
+@keyframes sealBreath{
+  0%,100%{transform:translate3d(0,0,0);filter:drop-shadow(0 14px 24px rgba(0,0,0,.28)) brightness(1)}
+  50%{transform:translate3d(0,-2px,0);filter:drop-shadow(0 16px 26px rgba(0,0,0,.32)) brightness(1.035)}
+}
+@keyframes sealGlimmer{
+  0%,56%,100%{opacity:0;transform:translateX(-110%) rotate(12deg)}
+  64%{opacity:.42}
+  72%{opacity:0;transform:translateX(155%) rotate(12deg)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal,.timeline-item:before,.btn,.mini-btn,.choice,input,select,textarea,.conditional,.floating-music{
+    transition:none!important;
+    animation:none!important;
+    transform:none!important;
+    filter:none!important;
+  }
+  .js-ready .reveal:not(.is-visible){
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+  }
+  .conditional{
+    display:none;
+    max-height:none;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+  .conditional.is-active{display:block}
+  .invitation-seal:after{display:none}
+}
+
 </style>
 </head>
 <body>
@@ -43,8 +204,8 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
 <section class="section" id="wishes"><div class="wrap"><div class="section-title reveal"><div class="eyebrow">пожелания</div><h2>Пара просьб перед вечностью</h2></div><div class="wish-grid reveal"><article class="card wish-card pattern-card"><div class="wish-icon">🌹</div><h3>Цветы</h3><p>Если захотите порадовать нас, лучше замените огромные букеты на бутылочку вина, книгу, сладость или другой небольшой знак внимания.</p></article><article class="card wish-card pattern-card"><div class="wish-icon">🎁</div><h3>Подарки</h3><p>Самый удобный формат подарка — в конверте. Даже вампирам иногда нужны земные радости.</p></article><article class="card wish-card pattern-card"><div class="wish-icon">👶</div><h3>Дети</h3><p>Пожалуйста, сообщите в анкете, если планируете прийти с детьми.</p></article><article class="card wish-card pattern-card"><div class="wish-icon">📸</div><h3>Фото</h3><p>Будем рады вашим фотографиям и видео. Главное — не пугайтесь, если кто-то слишком хорошо выглядит при лунном свете.</p></article></div></div></section>
 <section class="section" id="rsvp"><div class="wrap"><div class="section-title reveal"><div class="eyebrow">анкета</div><h2>Запись в список гостей клана</h2><p>Подтвердите, что рискнёте прийти. Анкета не кусается. Почти.</p></div><form class="rsvp pattern-card reveal" id="rsvpForm" name="bella-edward-rsvp"><div class="form-grid"><div class="field"><label for="name">Имя и фамилия</label><input id="name" name="name" type="text" placeholder="Например, Карлайл Каллен"></div><div class="field"><label for="attendance">Сможете ли присутствовать</label><select id="attendance" name="attendance"><option>Да, приду после заката</option><option>Да, буду с парой</option><option>Пока не уверен, сверяюсь с луной</option><option>К сожалению, не смогу — солнце, дела, ипотека</option></select></div><div class="field"><label for="guests">Сколько вас будет</label><select id="guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4+</option></select></div><div class="field"><label for="plusone">Будете ли с +1</label><select id="plusone" name="plusone"><option>Нет</option><option>Да</option><option>Пока не знаю</option></select></div><div class="field"><label for="children">Будут ли дети</label><select id="children" name="children"><option>Нет</option><option>Да</option><option>Пока не знаю</option></select></div><div class="field"><label for="menu">Пожелания по меню</label><input id="menu" name="menu" type="text" placeholder="Вегетарианское, без глютена, побольше десертов..."></div><div class="field full"><div class="field-title">Кем вы прибудете на церемонию?</div><div class="radio-grid" id="statusChoices"><label class="choice"><input type="radio" name="status" value="human" checked> Человек</label><label class="choice"><input type="radio" name="status" value="vampire"> Вампир</label><label class="choice"><input type="radio" name="status" value="werewolf"> Оборотень</label><label class="choice"><input type="radio" name="status" value="undecided"> Пока не определился, жду полнолуния</label></div><div class="conditional is-active" data-status="human"><h3>Для людей</h3><div class="form-grid"><div class="field"><label>Группа крови, если готовы раскрыть тайну</label><select name="human_blood"><option>I группа — классика</option><option>II группа — нежный вкус</option><option>III группа — редкий гость</option><option>IV группа — коллекционный вариант</option><option>Предпочитаю не уточнять, я просто потанцевать</option><option>У меня томатный сок, не приставайте</option></select></div><div class="field"><label>Уровень тревожности рядом с вампирами</label><select name="human_anxiety"><option>Полностью спокоен</option><option>Немного нервничаю</option><option>Держу чеснок в кармане</option><option>Я вообще не знал, куда иду</option></select></div><div class="field full"><label>Согласны ли вы не убегать во время первого танца?</label><select name="human_run"><option>Да, постараюсь</option><option>Зависит от музыки</option><option>Если Эдвард посмотрит слишком пристально — не обещаю</option></select></div></div><label class="check"><input type="checkbox" name="human_agree"> Я подтверждаю, что прихожу добровольно и осознаю риск быть очарованным.</label></div><div class="conditional" data-status="vampire"><h3>Для вампиров</h3><div class="form-grid"><div class="field"><label>Ваш тип питания</label><select name="vampire_food"><option>Вегетарианский, как у приличных Калленов</option><option>Только тортик и красное в бокале</option><option>Я на диете, сегодня никого не кусаю</option><option>Лучше не сажайте меня рядом с людьми</option></select></div><div class="field"><label>Как вы переносите вспышки фотографа?</label><select name="vampire_flash"><option>Спокойно, я красиво бликую</option><option>Могу слегка засверкать</option><option>Только без крупного плана</option><option>Фотографа предупредить заранее</option></select></div><div class="field"><label>Нужна ли вам теневая зона?</label><select name="vampire_shadow"><option>Да, ближе к шторам</option><option>Нет, я уже привык</option><option>Только если банкет начнётся до заката</option></select></div><div class="field"><label>Ваш свадебный напиток</label><select name="vampire_drink"><option>Красное вино</option><option>Гранатовый сок</option><option>Томатный сок</option><option>Что-нибудь тёмное и драматичное</option></select></div></div><label class="check"><input type="checkbox" name="vampire_agree"> Я обещаю не обращать гостей без согласования с молодожёнами.</label></div><div class="conditional" data-status="werewolf"><h3>Для оборотней</h3><div class="form-grid"><div class="field"><label>Обработка от блох пройдена?</label><select name="wolf_fleas"><option>Да, свежая</option><option>В процессе</option><option>Я обиделся</option><option>Это личный вопрос</option></select></div><div class="field"><label>Фаза луны влияет на ваше поведение?</label><select name="wolf_moon"><option>Нет, я воспитанный</option><option>Немного рычу после 23:00</option><option>Лучше не ставьте медленные танцы</option><option>Я отвечаю только за первую половину вечера</option></select></div><div class="field"><label>Нужна ли вам отдельная зона для перевоплощения?</label><select name="wolf_zone"><option>Нет, контролирую себя</option><option>Да, желательно за рестораном</option><option>Только если включат слишком грустную музыку</option></select></div><div class="field"><label>С кем вас лучше не сажать?</label><select name="wolf_seat"><option>С вампирами</option><option>С людьми с очень вкусным шашлыком</option><option>С бывшими</option><option>Сажайте куда хотите, я общительный</option></select></div><div class="field"><label>Степень линьки на мероприятии</label><select name="wolf_fur"><option>Не линяю</option><option>Немного, в пределах приличия</option><option>После меня нужен ролик для одежды</option><option>Я приду в костюме, всё под контролем</option></select></div></div><label class="check"><input type="checkbox" name="wolf_agree"> Я подтверждаю, что в случае полнолуния беру ответственность за порванный дресс-код.</label></div><div class="conditional" data-status="undecided"><h3>Для неопределившихся</h3><div class="form-grid"><div class="field"><label>Выберите ближайшее к вам состояние</label><select name="undecided_state"><option>Человек, но по утрам выгляжу как вампир</option><option>Вампир, но пока без официального статуса</option><option>Оборотень, но только в пробках</option><option>Я родственник, мне можно всё</option></select></div><div class="field"><label>Куда вас посадить?</label><select name="undecided_seat"><option>К людям</option><option>К вампирам</option><option>К оборотням</option><option>В безопасную нейтральную зону рядом с тортом</option></select></div></div></div></div><div class="field full"><label for="comment">Комментарий для Беллы и Эдварда</label><textarea id="comment" name="comment" placeholder="Напишите всё, что хотите сообщить молодожёнам"></textarea></div><div class="field full"><button class="btn" type="submit">Отправить анкету</button></div></div></form></div></section>
 <section class="section" id="contacts"><div class="wrap"><div class="section-title reveal"><div class="eyebrow">контакты</div><h2>Связь с кланом</h2><p>Если заблудитесь в тумане, не можете найти место сбора или хотите уточнить важные детали — напишите организатору. Ответ придёт быстрее, чем наступит рассвет.</p></div><div class="cards-grid reveal"><article class="card pattern-card"><h3>Белла</h3><p>Telegram: добавить позже.</p></article><article class="card pattern-card"><h3>Эдвард</h3><p>Telegram: добавить позже.</p></article></div><div class="cards-grid reveal" style="margin-top:14px;grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto"><article class="card pattern-card" style="text-align:center"><h3>Организатор</h3><p>По вопросам маршрута, тайминга и внезапных встреч с туманом.</p><div class="btn-row" style="margin-top:16px"><a class="btn" href="https://t.me/R2D2A22" target="_blank" rel="noopener">Написать в Telegram</a></div></article></div></div></section>
-<section class="section final no-cv" id="final"><div class="final-media"><img src="assets/forest.jpg" alt="Силуэты пары в лесу под луной" loading="lazy" decoding="async"></div><div class="final-overlay"></div><div class="final-content reveal is-visible"><div class="eyebrow">финал</div><h2>До встречи после заката</h2><p>С любовью, Белла и Эдвард. Вечность начинается с одного приглашения.</p><div class="btn-row"><a class="btn" href="#top">Вернуться наверх</a></div></div></section>
-</main><footer class="footer">Версия 1.5 · © Сергей Авласевич · <a href="https://t.me/avlasevi4ai" target="_blank" rel="noopener">AI: @avlasevi4ai</a></footer></div><button class="floating-music" type="button" id="floatingMusicBtn" aria-label="Включить музыку" title="Включить музыку"><img id="floatingMusicIcon" src="assets/music-off.png" alt=""></button><div class="toast" id="toast"></div>
+<section class="section final no-cv" id="final"><div class="final-media"><img src="assets/forest.jpg" alt="Силуэты пары в лесу под луной" loading="lazy" decoding="async"></div><div class="final-overlay"></div><div class="final-content reveal"><div class="eyebrow">финал</div><h2>До встречи после заката</h2><p>С любовью, Белла и Эдвард. Вечность начинается с одного приглашения.</p><div class="btn-row"><a class="btn" href="#top">Вернуться наверх</a></div></div></section>
+</main><footer class="footer">Версия 1.6 · © Сергей Авласевич · <a href="https://t.me/avlasevi4ai" target="_blank" rel="noopener">AI: @avlasevi4ai</a></footer></div><button class="floating-music" type="button" id="floatingMusicBtn" aria-label="Включить музыку" title="Включить музыку"><img id="floatingMusicIcon" src="assets/music-off.png" alt=""></button><div class="toast" id="toast"></div>
 <script>
 (function(){
   document.documentElement.classList.add('js-ready');
@@ -202,6 +363,28 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
     });
   }
 
+
+  const staggerGroups = [
+    '.timeline',
+    '.location-grid',
+    '.wish-grid',
+    '.palette',
+    '#contacts .cards-grid'
+  ];
+
+  staggerGroups.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((group) => {
+      Array.from(group.children).forEach((item, index) => {
+        item.classList.add('reveal');
+        item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 350)}ms`);
+      });
+    });
+  });
+
+  document.querySelectorAll('.timeline-item').forEach((item, index) => {
+    item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 420)}ms`);
+  });
+
   const reveals = document.querySelectorAll('.reveal:not(.is-visible)');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -211,7 +394,7 @@ main>.section:not(.letter-section):before{content:"";position:absolute;inset:0;z
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.10 });
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add('is-visible'));
